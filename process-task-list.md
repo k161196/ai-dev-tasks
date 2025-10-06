@@ -3,8 +3,8 @@
 Guidelines for managing task lists in markdown files to track progress on completing a PRD
 
 ## Task Implementation
-- **One sub-task at a time:** Do **NOT** start the next sub‑task until you ask the user for permission and they say "yes" or "y"
-- **Completion protocol:**  
+- **One parent task at a time:** Do **NOT** start the next parent task until you ask the user for permission and they say "yes" or "y"
+- **Completion protocol:**
   1. When you finish a **sub‑task**, immediately mark it as completed by changing `[ ]` to `[x]`.
   2. If **all** subtasks underneath a parent task are now `[x]`, follow this sequence:
     - **First**: Run the full test suite (`pytest`, `npm test`, `bin/rails test`, etc.)
@@ -21,7 +21,7 @@ Guidelines for managing task lists in markdown files to track progress on comple
         git commit -m "feat: add payment validation logic" -m "- Validates card type and expiry" -m "- Adds unit tests for edge cases" -m "Related to T123 in PRD"
         ```
   3. Once all the subtasks are marked completed and changes have been committed, mark the **parent task** as completed.
-- Stop after each sub‑task and wait for the user's go‑ahead.
+- Stop after each parent task and wait for the user's go‑ahead.
 
 ## Task List Maintenance
 
@@ -44,4 +44,4 @@ When working with task lists, the AI must:
 3. Add newly discovered tasks.
 4. Keep "Relevant Files" accurate and up to date.
 5. Before starting work, check which sub‑task is next.
-6. After implementing a sub‑task, update the file and then pause for user approval.
+6. After implementing a parent task, update the file and then pause for user approval.
