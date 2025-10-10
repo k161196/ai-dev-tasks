@@ -1,6 +1,6 @@
 # Task List Management
 
-Guidelines for managing task lists in markdown files to track progress on completing a PRD
+Guidelines for managing task lists in markdown files to track progress on completing a PRD or FRD
 
 ## Task Implementation
 - **One parent task at a time:** Do **NOT** start the next parent task until you ask the user for permission and they say "yes" or "y"
@@ -14,11 +14,17 @@ Guidelines for managing task lists in markdown files to track progress on comple
       - Uses conventional commit format (`feat:`, `fix:`, `refactor:`, etc.)
       - Summarizes what was accomplished in the parent task
       - Lists key changes and additions
-      - References the task number and PRD context
+      - References the task number and document context (PRD or FRD)
       - **Formats the message as a single-line command using `-m` flags**, e.g.:
 
         ```
-        git commit -m "feat: add payment validation logic" -m "- Validates card type and expiry" -m "- Adds unit tests for edge cases" -m "Related to T123 in PRD"
+        git commit -m "feat: add payment validation logic" -m "- Validates card type and expiry" -m "- Adds unit tests for edge cases" -m "Related to T123 in PRD-0001"
+        ```
+
+        or for FRD:
+
+        ```
+        git commit -m "feat: implement user authentication API" -m "- POST /api/auth/login endpoint" -m "- JWT token generation" -m "- PostgreSQL user table migration" -m "Implements Phase 1 of FRD-0001"
         ```
   3. Once all the subtasks are marked completed and changes have been committed, mark the **parent task** as completed.
 - Stop after each parent task and wait for the user's go‑ahead.
