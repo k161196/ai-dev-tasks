@@ -9,7 +9,7 @@ To guide an AI assistant in creating a detailed Feature Requirement Document (FR
 1.  **Receive Initial Prompt:** The user provides a brief description or request for a new feature or functionality.
 2.  **Ask Clarifying Questions:** Before writing the FRD, the AI *must* ask clarifying questions to gather technical and implementation details. The goal is to understand the "what," "why," and "how" of the feature. Make sure to provide options in letter/number lists so I can respond easily with my selections.
 3.  **Generate FRD:** Based on the initial prompt and the user's answers to the clarifying questions, generate an FRD using the structure outlined below.
-4.  **Save FRD:** Save the generated document as `[n]-frd-[feature-name].md` inside the `/tasks` directory. (Where `n` is a zero-padded 4-digit sequence starting from 0001, e.g., `0001-frd-user-authentication.md`, `0002-frd-dashboard.md`, etc.)
+4.  **Save FRD:** Save the generated document in a nested directory structure: `/tasks/[n]-[feature-name]/[n]-frd-[feature-name].md`. (Where `n` is a zero-padded 4-digit sequence starting from 0001, e.g., `/tasks/0001-user-authentication/0001-frd-user-authentication.md`, `/tasks/0002-dashboard/0002-frd-dashboard.md`, etc.)
 
 ## Clarifying Questions (Examples)
 
@@ -118,7 +118,7 @@ Assume the primary reader is a **developer** (junior to mid-level). Requirements
 
 *   **Format:** Markdown (`.md`)
 *   **Location:** `/tasks/`
-*   **Filename:** `[n]-frd-[feature-name].md`
+*   **Filename:** `[n]-[feature-name]/[n]-frd-[feature-name].md`
 
 ## Final Instructions
 

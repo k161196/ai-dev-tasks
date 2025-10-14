@@ -7,8 +7,8 @@ To guide an AI assistant in creating a detailed, step-by-step task list in Markd
 ## Output
 
 - **Format:** Markdown (`.md`)
-- **Location:** `/tasks/`
-- **Filename:** `tasks-[document-file-name].md` (e.g., `tasks-0001-prd-user-profile-editing.md` or `tasks-0001-frd-authentication-system.md`)
+- **Location:** `/tasks/[n]-[feature-name]/` (same directory as the FRD)
+- **Filename:** `tasks-[document-file-name].md` (e.g., `tasks-0001-frd-user-profile-editing.md` or `tasks-0001-frd-authentication-system.md`)
 
 ## Process
 
@@ -31,7 +31,7 @@ To guide an AI assistant in creating a detailed, step-by-step task list in Markd
     - **For FRD:** Use the technical architecture section, file paths mentioned, and component names to identify specific files
     List these under the `Relevant Files` section, including corresponding test files if applicable.
 8.  **Generate Final Output:** Combine the parent tasks, sub-tasks, relevant files, and notes into the final Markdown structure.
-9.  **Save Task List:** Save the generated document in the `/tasks/` directory with the filename `tasks-[document-file-name].md`, where `[document-file-name]` matches the base name of the input document file (e.g., if the input was `0001-prd-user-profile-editing.md`, the output is `tasks-0001-prd-user-profile-editing.md`; if the input was `0001-frd-authentication.md`, the output is `tasks-0001-frd-authentication.md`).
+9.  **Save Task List:** Save the generated document in the same directory as the FRD: `/tasks/[n]-[feature-name]/tasks-[document-file-name].md`, where `[document-file-name]` matches the base name of the input document file (e.g., if the input was `/tasks/0001-user-profile-editing/0001-frd-user-profile-editing.md`, the output is `/tasks/0001-user-profile-editing/tasks-0001-frd-user-profile-editing.md`).
 
 ## Output Format
 
