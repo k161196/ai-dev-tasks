@@ -1,0 +1,14 @@
+[
+  {
+    "category": "ui",
+    "description": "Add full-screen floating notification overlay",
+    "steps": [
+      "On timer completion, present a full-screen overlay styled like the provided mock (teal background, centered copy).",
+      "Show a single-line prompt message, a thin progress bar, and a \"X seconds remaining\" countdown label.",
+      "Include a \"Postpone this break\" action (clock icon optional) that defers the current reminder.",
+      "Auto-dismiss the overlay when the countdown reaches zero or the user dismisses it."
+    ],
+    "passes": true
+  }
+
+]
